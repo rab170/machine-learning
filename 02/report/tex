@@ -1,0 +1,24 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+
+\title{Machine Learning \\ Assignment 2 \\ SoSe 2017}
+\author{Rob Brown}
+\date{\today}
+
+\begin{document}
+\maketitle
+Here, we have implemented binary classification through logistic regression, and trained it using stochastic gradient descent. This was accomplished by generalizing the $h_\theta(x)$. To train this model, we have the same model parameters as our last assignment, namely a learning rate $\alpha$, and a convergence condition $\epsilon$. 
+
+\begin{figure}[ht!]
+  \centering
+   \includegraphics[width=120mm]{fit.png}
+   \label{fig:loss}
+\end{figure}
+
+This image provides a good illustration of the classic problem in separable data. Our linear separation is highly dependent on our convergence condition $\epsilon$, the selection of which is largely arbitrary. One could very reasonably argue that all of the linear separations above are reasonable. But which is the best? This arbitrary decision can be eliminated through the use of Support Vector Machines which maximizing the marginal distance between the two classes.
+
+\bibliographystyle{abbrv}
+\bibliography{main}
+
+\end{document}
+

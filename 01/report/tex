@@ -1,0 +1,32 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+
+\title{Machine Learning \\ Assignment 1 \\ SoSe 2017}
+\author{Rob Brown}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+Here, we have implemented stochastic gradient descent and fit a sinusoid with random noise using polynomial regression. The learning rate $\alpha$ was selected by looking at graphs of the RMS error for different learning rates. We observed that the number of iterations to meet our convergence condition decreased until a certain point, and then diverged at $\alpha <
+ 0.45$
+
+\begin{figure}[ht!]
+  \centering
+   \includegraphics[width=120mm]{img/training_error.png}
+   \label{fig:loss}
+\end{figure}
+
+For the models trained with $ 0.25 \leq \alpha \leq 0.45$ we see a progressive reduction in the number of iterations required for convergence (i.e., the epoch count) as well as the RMS training error. With $ \alpha > 0.45 $ we see worse RMS training error, in addition to more iterations (both of which are unacceptable. Therefore, we let $\alpha = 0.45$ and build our model as seen below. Note that there is almost certainly a more optimal selection of $\alpha$, but this level of precision suffices for the task.
+
+\begin{figure}[ht!]
+  \centering
+   \includegraphics[width=120mm]{img/fit.png}
+   \label{fig:loss}
+\end{figure}
+
+\bibliographystyle{abbrv}
+\bibliography{main}
+
+\end{document}
+
